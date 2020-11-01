@@ -9,7 +9,7 @@ Deno is a simple, modern and secure runtime for javascript and typesrcript that 
 - built-in typescript support
 - import from url - no node_modules - no central package management
 - es6 module import syntax
-- top level await
+- top level await, don't need an async function to write await
 - more compatible with browser: fetch, window
 - security - flags
 - ships single executable file
@@ -27,3 +27,4 @@ Deno is a simple, modern and secure runtime for javascript and typesrcript that 
 - serving static files (js,css)
 - Handle form submmission
 - validation
+- Oak framework (third party module)
