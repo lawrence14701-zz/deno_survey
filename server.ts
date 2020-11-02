@@ -1,17 +1,27 @@
 import {
-  serve,
-  Server,
-  ServerRequest,
-} from "https://deno.land/std@0.76.0/http/server.ts";
+  Application,
+  Router,
+  RouterContext,
+} from "https://deno.land/x/oak/mod.ts";
 
-const s: Server = serve({ port: 8000 });
+const app = new Application();
 
-console.log("Started at http://localhost:8000");
+const router = new Router();
 
-for await (const req: ServerRequest of s) {
-  if (req.url === "/") {
-    req.respond({ body: "hello world" });
-  } else if (req.url === "/about") {
-    req.respond({ body: "about world" });
-  }
-}
+router.get("/", (ctx: RouterContext) => {
+  ctx.response.body = "helo world";
+});
+
+app.use(router.routes());
+
+app.use(router.allowedMethods());
+
+app.addEventListener("listen", ({ hostname, port, secure }) => {
+  console.log(
+    `Listening on  ${secure ? `https://` : `http://`}${
+      hostname || "localhost"
+    }:${port}`
+  );
+});
+
+await app.listen({ port: 8000 });

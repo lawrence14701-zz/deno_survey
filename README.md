@@ -16,6 +16,18 @@ Deno is a simple, modern and secure runtime for javascript and typesrcript that 
 - built-in code formatting support
 - built-in testing support
 
+# DEV tips
+
+- if using VScode put the following in your settings.
+
+```
+{
+    "deno.enable": true,
+    "deno.lint": true,
+    "deno.unstable": true
+}
+```
+
 # Technologies
 
 - typescript
