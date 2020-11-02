@@ -29,6 +29,7 @@ Deno is a simple, modern and secure runtime for javascript and typesrcript that 
 ```
 
 - \$ denon run --allow-net server.ts (commanad to hot reload changes)
+- dependencies are located in deps.ts
 
 # Technologies
 
