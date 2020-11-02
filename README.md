@@ -28,6 +28,8 @@ Deno is a simple, modern and secure runtime for javascript and typesrcript that 
 }
 ```
 
+- \$ denon run --allow-net server.ts (commanad to hot reload changes)
+
 # Technologies
 
 - typescript
@@ -40,3 +42,4 @@ Deno is a simple, modern and secure runtime for javascript and typesrcript that 
 - Handle form submmission
 - validation
 - Oak framework (third party module)
+- denon (hot reloading)
